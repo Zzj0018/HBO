@@ -11,7 +11,7 @@ subscribe-url:
 proxy-providers:
   聚会:
     interval: 86400
-    url: https://dc2.cc.cd:3002/Lz18/download/collection/%E7%94%B5%E8%A7%86%E7%89%88?target=ClashMeta
+    url: https://Lz
     benchmark-timeout: 5
     benchmark-url: http://1.1.1.1/generate_204
 proxy-groups:
