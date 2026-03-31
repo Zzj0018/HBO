@@ -1,0 +1,164 @@
+mode: rule
+log-level: info
+dns:
+  # 默认的域名解析服务器
+  nameserver: [223.5.5.5, 119.29.29.29]
+  # fake ip 白名单列表'以下地址不会下发fakeip映射用于连接
+  fake-ip-filter: ['+.lan', '*', '+.local', '+.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '+.10099.com.cn', '+.msftconnecttest.com', '+.msftncsi.com', 'lancache.steamcontent.com']
+# > 订阅信息展示
+subscribe-url:
+# > 远程服务器
+proxy-providers:
+  聚会:
+    interval: 86400
+    url: https://dc2.cc.cd:3002/Lz18/download/collection/%E7%94%B5%E8%A7%86%E7%89%88?target=ClashMeta
+    benchmark-timeout: 5
+    benchmark-url: http://1.1.1.1/generate_204
+proxy-groups:
+  - {name: MyTVSuper, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/myTV_SUPER.png', type: select, proxies: [香港-🇭🇰, 香港故转]}
+  - {name: YouTube, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png', type: select, proxies: [美国代理, 美国-🇺🇸, 香港-🇭🇰, 香港故转, 香港节点, 台湾节点, DIRECT]}
+  - icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/DomesticMedia.png
+    name: 欧飞ofiii
+    proxies:
+      - 台湾故转
+    type: select
+  - {name: 国际媒体, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blinkload.png', type: select, proxies: [香港-🇭🇰, 美国代理, 美国-🇺🇸]}
+  - {name: 漏网之鱼, icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png', type: select, proxies: [DIRECT]}
+  - name: 香港-🇭🇰
+    type: select
+    include-all: true
+    filter: "(?=.*(AS hy2))^((?!(台|香|日|韩|新|深|美)).)*$"
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png
+  - name: 美国代理
+    type: fallback
+    interval: 180
+    lazy: null
+    proxies:
+      - 美国代A
+      - 美国代B
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  - {name: 美国代A, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png', type: select, include-all: true, filter: "(?i)QA|6ff2ac18|(\b(US|United States)\b)"}
+  - {name: 美国代B, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png', type: select, include-all: true, filter: "(?i)QA|6ff2ac18|(\b(US|United States)\b)"}
+  - name: 美国-🇺🇸
+    type: select
+    include-all: true
+    filter: "(?=.*(QA hy2))^((?!(台|香|日|韩|新|深|美)).)*$"
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  - name: 香港故转
+    type: fallback
+    interval: 180
+    lazy: null
+    proxies:
+      - 香港专线
+      - 香港节点
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png
+  - name: 香港专线
+    type: fallback
+    interval: 180
+    lazy: null
+    proxies:
+      - 香港专 1
+      - 香港专 2
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
+  - {name: 香港专 1, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png', type: select, include-all: true, filter: "(?i)香港|🇭🇰|(\b(HK|Hong)\b)"}
+  - {name: 香港专 2, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png', type: select, include-all: true, filter: "(?i)香港|🇭🇰|(\b(HK|Hong)\b)"}
+  - {name: 香港节点, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png', type: url-test, interval: 300, include-all: true, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"}
+  - name: 台湾故转
+    type: fallback
+    interval: 180
+    lazy: null
+    proxies:
+      - 台湾专线
+      - 台湾节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
+  - name: 台湾专线
+    type: fallback
+    interval: 180
+    lazy: null
+    proxies:
+      - 台湾专 A
+      - 台湾专 B
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+  - name: 台湾专 A
+    type: select
+    include-all: true
+    filter: "(?=.*(台湾|TW|Tai|Taiwan)).*$"
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+  - name: 台湾专 B
+    type: select
+    include-all: true
+    filter: "(?=.*(台湾|TW|Tai|Taiwan)).*$"
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png
+  - {name: 台湾节点, icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png', type: url-test, interval: 300, include-all: true, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)"}
+rule-providers:
+  Direct: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Direct.list'}
+  Lan: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Lan.list'}
+  Reject: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Reject.list'}
+  AppleCN: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/AppleCN.list'}
+  AppleProxy: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/AppleServers.list'}
+  Microsoft: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Microsoft.list'}
+  OneDrive: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/OneDrive.list'}
+  Github: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Github.list'}
+  YouTube: {behavior: classical, format: text, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list'}
+  Google: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Google.list'}
+  Telegram: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Telegram.list'}
+  Twitter: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Twitter.list'}
+  Steam: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Steam.list'}
+  Epic: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Epic.list'}
+  AI: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/AI.list'}
+  Emby: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Emby.list'}
+  Spotify: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Spotify.list'}
+  Bahamut: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Bahamut.list'}
+  TVB: {behavior: classical, format: text, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/TVB/TVB.list'}
+  Netflix: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Netflix.list'}
+  Disney: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Disney.list'}
+  PrimeVideo: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/PrimeVideo.list'}
+  HBO: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/HBO.list'}
+  TikTok: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/TikTok.list'}
+  Proxy: {behavior: classical, format: text, interval: 86400, url: 'https://github.com/Repcz/Tool/raw/X/Stash/Rules/Proxy.list'}
+  MyTVSuper: {behavior: classical, format: text, interval: 86400, url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/MyTVSuper.list'}
+  Gemini: {behavior: classical, format: text, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.list'}
+  Global: {behavior: classical, format: text, interval: 86400, url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list'}
+  appleAI: {behavior: classical, format: text, interval: 86400, url: 'https://raw.githubusercontent.com/xpdigital/Apple-Rule/refs/heads/main/Apple-US.list'}
+  Meta AI: {behavior: classical, format: text, interval: 86400, url: 'https://gh-proxy.com/raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/MetaAi.list'}
+  Ad:
+    type: http
+    behavior: domain
+    path: "./rule_provider/Ad.yaml"
+    format: yaml
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.yaml
+    interval: 86400
+  TW tv:
+    behavior: classical
+    format: text
+    interval: 8640
+    url: https://raw.githubusercontent.com/Zzj0018/Aa/refs/heads/main/TWtv.list
+rules:
+  - RULE-SET,Ad,REJECT
+  - RULE-SET,TW tv,欧飞ofiii
+  - DOMAIN-KEYWORD,hsex,国外网站
+  - DOMAIN-SUFFIX,amemv.com,DIRECT
+  - DOMAIN-SUFFIX,ixigua.com,DIRECT
+  - DOMAIN-SUFFIX,ixiguavideo.com,DIRECT
+  - DOMAIN-SUFFIX,pstatp.com,DIRECT
+  - DOMAIN-SUFFIX,snssdk.com,DIRECT
+  - DOMAIN-SUFFIX,toutiao.com,DIRECT
+  - DOMAIN-SUFFIX,lf3-static.bytednsdoc.com,DIRECT
+  - DOMAIN-SUFFIX,v5-dy-o-abtest.zjcdn.com,DIRECT
+  - DOMAIN-SUFFIX,douyincdn.com,DIRECT
+  - DOMAIN-SUFFIX,douyinpic.com,DIRECT
+  - DOMAIN-SUFFIX,douyinstatic.com,DIRECT
+  - DOMAIN-SUFFIX,douyinvod.com,DIRECT
+  - DOMAIN-SUFFIX,idouyinvod.com,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Reject,REJECT
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,TVB,MyTVSuper
+  - RULE-SET,MyTVSuper,MyTVSuper
+  - RULE-SET,Bahamut,国际媒体
+  - RULE-SET,Netflix,国际媒体
+  - RULE-SET,PrimeVideo,国际媒体
+  - RULE-SET,AppleCN,DIRECT
+  - RULE-SET,Lan,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,漏网之鱼
