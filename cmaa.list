@@ -1,4 +1,4 @@
-#
+# ip
 DOMAIN-SUFFIX,localhost
 DOMAIN-SUFFIX,local
 DOMAIN-SUFFIX,lan
@@ -167,4 +167,22 @@ DOMAIN-SUFFIX,weiyun.com
 DOMAIN-SUFFIX,myapp.com
 DOMAIN-SUFFIX,qcloud.com
 DOMAIN-SUFFIX,myqcloud.com
-DOMAIN-SUFFIX,tencentcloud.com,
+DOMAIN-SUFFIX,tencentcloud.com
+
+# NAME: 115
+DOMAIN,fhnfile.oss-cn-shenzhen.aliyuncs.com
+DOMAIN-SUFFIX,115.com
+DOMAIN-SUFFIX,115cdn.com
+DOMAIN-SUFFIX,115cdn.net
+DOMAIN-SUFFIX,115img.com
+DOMAIN-SUFFIX,116cd.cn
+DOMAIN-SUFFIX,116cd.com
+DOMAIN-SUFFIX,116cd.net
+DOMAIN-SUFFIX,anxia.com
+DOMAIN-SUFFIX,sq.cc
+
+# Virgin Player
+USER-AGENT,Virgin*
+DOMAIN-SUFFIX,v-itv.com
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,tmdb.org
