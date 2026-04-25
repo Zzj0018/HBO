@@ -170,7 +170,7 @@ DOMAIN-SUFFIX,myqcloud.com
 DOMAIN-SUFFIX,tencentcloud.com
 
 # NAME: 115
-DOMAIN,fhnfile.oss-cn-shenzhen.aliyuncs.com
+# DOMAIN,fhnfile.oss-cn-shenzhen.aliyuncs.com
 DOMAIN-SUFFIX,115.com
 DOMAIN-SUFFIX,115cdn.com
 DOMAIN-SUFFIX,115cdn.net
