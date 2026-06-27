@@ -265,5 +265,15 @@ TV
 DOMAIN-SUFFIX,cdn.163189.xyz
 DOMAIN-SUFFIX,163189.xyz
 
+# Aqara（绿米）
+DOMAIN-SUFFIX,aqara.com
+DOMAIN-SUFFIX,aqara.cn
+DOMAIN-SUFFIX,aqara.com.cn
+DOMAIN-SUFFIX,aqara.net
+DOMAIN-SUFFIX,aqara.io
+DOMAIN-KEYWORD,aqara
+DOMAIN-SUFFIX,ankasa.cn
+DOMAIN-KEYWORD,ankasa
+
 
 
