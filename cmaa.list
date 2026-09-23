@@ -273,5 +273,12 @@ DOMAIN-SUFFIX,aqara.net
 DOMAIN-SUFFIX,aqara.io
 DOMAIN-SUFFIX,ankasa.cn
 
+# 中国农业银行 (ABC)
+DOMAIN-KEYWORD,abchina
+DOMAIN-SUFFIX,abchina.com
+DOMAIN-SUFFIX,abchina.com.cn
+DOMAIN-SUFFIX,abchina.org.cn
+
+
 
 
