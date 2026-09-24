@@ -283,6 +283,15 @@ DOMAIN-SUFFIX,abchina.org.cn
 DOMAIN-KEYWORD,saileitv
 DOMAIN-SUFFIX,saileitv.com
 DOMAIN-SUFFIX,sailei.dpdns.org
+DOMAIN-SUFFIX,saileitv.net
+
+
+# 独播库TV
+DOMAIN-KEYWORD,duboku
+DOMAIN-SUFFIX,duboku.tv
+DOMAIN-SUFFIX,duboku.io
+
+
 
 
 
