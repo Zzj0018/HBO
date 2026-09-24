@@ -279,6 +279,11 @@ DOMAIN-SUFFIX,abchina.com
 DOMAIN-SUFFIX,abchina.com.cn
 DOMAIN-SUFFIX,abchina.org.cn
 
+# 赛雷TV
+DOMAIN-KEYWORD,saileitv
+DOMAIN-SUFFIX,saileitv.com
+DOMAIN-SUFFIX,sailei.dpdns.org
+
 
 
 
