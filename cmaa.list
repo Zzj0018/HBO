@@ -187,11 +187,17 @@ DOMAIN-SUFFIX,v-itv.com
 DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,tmdb.org
 
-# 红杏机场
-DOMAIN-SUFFIX,hongxingyun.monster
-DOMAIN-SUFFIX,hongxing5s.cc
-DOMAIN-SUFFIX,hongxing6s.cc
-DOMAIN-SUFFIX,hongxing7s.cc
+
+# 抖音主域名及服务
+DOMAIN-SUFFIX,douyin.com
+# 抖音短链接、静态资源及常见 CDN 域名
+DOMAIN-SUFFIX,amemv.com 
+DOMAIN-SUFFIX,douyincdn.com
+DOMAIN-SUFFIX,douyinpic.com
+DOMAIN-SUFFIX,pstatp.com
+# 字节跳动相关公共及服务域名（部分抖音业务会复用）
+DOMAIN-SUFFIX,bytegecko.com
+
 
 # 豆包
 DOMAIN-SUFFIX,doubao.com 
