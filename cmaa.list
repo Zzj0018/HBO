@@ -264,9 +264,6 @@ DOMAIN-SUFFIX,atv.youku.com
 DOMAIN-SUFFIX,ott.youku.com
 DOMAIN-SUFFIX,tv.youku.com
 
-#江西教育
-DOMAIN-SUFFIX,xxyd.jxeduyun.comk
-
 TV
 DOMAIN-SUFFIX,cdn.163189.xyz
 DOMAIN-SUFFIX,163189.xyz
@@ -284,13 +281,6 @@ DOMAIN-KEYWORD,abchina
 DOMAIN-SUFFIX,abchina.com
 DOMAIN-SUFFIX,abchina.com.cn
 DOMAIN-SUFFIX,abchina.org.cn
-
-# 赛雷TV
-DOMAIN-KEYWORD,saileitv
-DOMAIN-SUFFIX,saileitv.com
-DOMAIN-SUFFIX,sailei.dpdns.org
-DOMAIN-SUFFIX,saileitv.net
-
 
 # 独播库TV
 DOMAIN-KEYWORD,duboku
