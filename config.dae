@@ -30,6 +30,11 @@ group {
         final: Final
         interrupt_connections: true
     }
+    myTVSUPER {
+        filter: name(regex: '🇭🇰|HK|hk|香港|港|HongKong') && !name(regex: '排除')
+        final: Final
+        interrupt_connections: true
+    }
     YouTube {
         filter: name(regex: '🇭🇰|HK|hk|香港|港|HongKong') && !name(regex: '排除')
         final: Final
@@ -117,8 +122,11 @@ routing {
     dip(geoip: private, geoip: cn) && !dport(53, 853) -> direct(must)
     dport(853) -> block
     l4proto(udp) && dport(443) -> block
-    domain(suffix: googleapis.cn, suffix: xn--ngstr-lra8j.com) -> Google
+    domain(geosite:cn) -> direct
+    domain(suffix: gemini.google.com, suffix: google.com, suffix: googleapis.cn, suffix: xn--ngstr-lra8j.com) -> Google
     domain(suffix: withgoogle.com, suffix: notebooklm.google, geosite: category-ai-!cn) -> AI
+    domain(geosite: tvb) -> myTVSUPER
+    domain(suffix: tvb.com, suffix: mytvsuper.com) -> myTVSUPER
     domain(geosite: youtube) -> YouTube
     domain(geosite: google) -> Google
     domain(geosite: github) -> Github
