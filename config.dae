@@ -106,7 +106,7 @@ dns {
             qtype(https, svcb) -> reject
             qtype(aaaa) -> reject
             qname(suffix: googleapis.cn, suffix: xn--ngstr-lra8j.com) -> remote
-            qname(geosite: cn, geosite: microsoft@cn, geosite: apple@cn, geosite: private) -> local
+            qname(geosite: cn, geosite: microsoft@cn, geosite: apple, geosite: apple@cn, geosite: private, geosite: steam@cn) -> local
             qname(geosite: geolocation-!cn) -> remote
             fallback: remote
         }
