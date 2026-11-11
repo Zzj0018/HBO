@@ -98,7 +98,7 @@ group {
 
 dns {
     upstream {
-        remote: 'https://8.8.8.8/dns-query'
+        remote: 'tcp+udp://8.8.8.8:53' -> Proxy
         local: 'https://223.5.5.5/dns-query'
     }
     routing {
