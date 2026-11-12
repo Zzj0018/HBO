@@ -304,6 +304,23 @@ DOMAIN-SUFFIX,ncat22.com
 DOMAIN-KEYWORD,ncat
 DOMAIN-KEYWORD,wangfeimao
 
+# 红果短剧核心及字节跳动关联媒体域名
+DOMAIN-KEYWORD,hongguo
+DOMAIN-SUFFIX,hongguoduanju.com
+DOMAIN-SUFFIX,fqnovel.com
+DOMAIN-SUFFIX,byteimg.com
+DOMAIN-SUFFIX,ibytedapm.com
+DOMAIN-SUFFIX,zijieapi.com
+DOMAIN-SUFFIX,snssdk.com
+DOMAIN-SUFFIX,toutiaoapi.com
+
+# 赛雷TV 核心域名与关键词匹配
+DOMAIN-KEYWORD,sailei
+DOMAIN-SUFFIX,sailei.tv
+DOMAIN-SUFFIX,saileitv.com
+DOMAIN-SUFFIX,sailei.cc
+
+
 
 
 
